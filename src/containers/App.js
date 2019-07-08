@@ -1,11 +1,23 @@
 import React, {Component} from 'react';
-import './App.css';
-import Hello from './presentational/atoms/Hello.js'
-import navbar from '../../present/navbar.js'
+import '../assests/css/App.css';
+// import Hello from '../components/Hello.jsx'
+import MyNavbar from '../components/MyNavbar'
+import Login from './Login.jsx'
+import Join from './Join'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 class App extends Component{
+  constructor(props){
+    super();
+  }
   render(){
       return (
-        <Hello name='홍길동'></Hello>
+        <div className = 'wrapper'>
+         <MyNavbar/>
+         {/* <Hello/> */}
+           {/* <Login/>
+           <Join/> */}
+      </div>
       );
 
   }
